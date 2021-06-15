@@ -1,0 +1,379 @@
+/* CSS
+Premier test avec Grdi et Mobile First*/
+
+/* Colors */
+:root {
+    --text-primary-color:#00252E;
+    --text-secondary-color:#808E9A;
+    --accent:#FF52C1;
+}
+
+/* Base */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+p, a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Layout */
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+@media screen and (min-width:36em) {
+    .container {
+        max-width: 53.6rem;
+    }
+}
+
+@media screen and (min-width:48em) {
+    .container {
+        max-width: 72.8rem;
+    }
+}
+
+@media screen and (min-width:62em) {
+    .container {
+        max-width: 95.2rem;
+    }
+}
+
+@media screen and (min-width:75em) {
+    .container {
+        max-width: 116rem;
+    }
+}
+
+
+
+/* Components */
+.btn {
+    border-radius: 5rem;
+    background: var(--accent);
+    color: #fff;
+}
+
+
+
+/* Header */
+.site-header {
+    background-color: var(--text-secondary-color);
+    background-image: url("../img/HERO BG.svg");
+    background-position-y: 100%;
+    padding-bottom: 3.7rem;
+}
+
+.site-header .container {
+    display: grid;
+    row-gap: 8.4rem;
+    grid-template-columns: 1fr;
+    color: var(--text-primary-color);
+    text-align: center;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.4rem;
+}
+
+.header-logo {
+    max-height: 1.6rem;
+    margin: 0.4rem 0;
+}
+
+.header-nav .cta {
+    padding: 0.5rem 2.3rem;
+    background: white;
+    box-shadow: 0px 3px 11px #00000018;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary-color);
+    
+}
+
+
+.header-text {
+    margin: 0 2rem;
+}
+
+.header-text h1 {
+    font-size: 2.4rem;
+}
+
+.header-text p {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.header-text .cta {
+    padding: 1.2rem 4rem;
+}
+
+
+@media screen and (min-width:48em) {
+
+    .site-header {
+        background-size: cover;
+        padding-bottom: 7.2rem;
+    }
+
+    .site-header .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 7rem;
+        align-items: center;
+        text-align: left;
+    }
+
+    .header-nav {
+        grid-column: span 2;
+        margin-top: 4.8rem;
+    }
+
+    .header-logo {
+        max-height: 3.1rem;
+        margin: 0.8rem 0;
+    }
+
+    .header-nav .cta {
+        padding: 1.4rem 6.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+/*  Features */
+
+.main-content{
+    padding-bottom: 2rem;
+}
+
+.features {
+    flex-direction: column;
+    margin: 5.9rem 0;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 16px #0000001A;
+    margin-bottom: 4rem;
+}
+
+.feature-img {
+    margin: 5rem 5rem 2rem 5rem;
+}
+
+.feature-text {
+    margin: 2rem 4rem 4rem 4rem;
+    text-align: center;
+}
+
+.feature-title {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+}
+
+.feature-description {
+    font-size: 1.4rem;
+    color: var(--text-secondary-color);
+}
+
+
+/* Last Chance */
+.last-chance-cta {
+    background: white;
+    margin:auto;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 4rem 0;
+    box-shadow: 0px 0px 16px #0000001A;
+    position: relative;
+    top: 8rem;
+}
+
+.last-chance-cta .h1-like {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.last-cta-button {
+    font-size: 1rem;
+    padding: 1.3rem 5rem;
+    box-shadow: 0px 6px 13px #00252E39;
+}
+
+
+
+
+/* 768px */
+@media screen and (min-width:768px) {
+    
+    .features {
+        margin: 5rem 0;
+    }
+
+    .feature {
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+
+    .feature:nth-child(odd) img {
+        order: 1;
+    }
+
+    .feature-img {
+        margin: 2.5rem;
+    }
+    
+    .feature-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 40%;
+    }
+
+    .feature-title {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-description{
+        text-align: left;
+        font-size: 1.6rem;
+    }
+
+    .feature-img {
+        max-width: 40%;
+    }
+}
+/* 1200px */
+@media screen and (min-width:75em) {
+
+    .features {
+        margin: 10rem 0;
+    }
+
+    .feature-img {
+        margin: 0;
+    }
+
+    .feature-title {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .feature-description{
+        font-size: 1.8rem;
+    }
+
+}
+
+
+
+
+
+/* Footer -------------------------------- */
+footer {
+    background-color: var(--text-primary-color);
+    padding-top: 13.9rem;
+    padding-bottom: 5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 6.5rem;
+    color: white;
+}
+
+
+.footer-logo {
+    max-width: 16rem;
+}
+
+.footer-link {
+    color: white;
+    margin: 3rem 0;
+}
+
+.address-link {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.6rem;
+    
+}
+
+
+.socials ul {
+    display: flex;
+    justify-content: center;
+}
+
+.socials li {
+    border: 1px solid white;
+    border-radius: 15rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+    .footer-content {
+        grid-template-columns: 2fr repeat(2, 1fr);
+    }
+
+
+
+    .real-footer ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links, .socials ul  {
+        flex-direction: row;
+    }
+
+    .address-info {
+        display: inline-flex;
+    }
+    .address-info img {
+        margin-right: 1rem;
+    }
+
+    footer div small {
+        color: white;
+        margin-left: auto;
+    }
+}
